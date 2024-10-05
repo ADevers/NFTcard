@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(217, 54%, 11%);
+    height: 100vh;
+    display: grid;
+}
+
+.main {
+    width: 40vh;
+    height: 65vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 56% 10% 15% 9% 10%;
+    grid-template-areas:
+        "image image"
+        "h1 h1"
+        "text text"
+        "sims time"
+        "footer footer";
+    background-color: hsl(216, 50%, 16%);
+    padding: 20px;
+    align-self: center;
+    justify-self: center;
+    border-radius: 10px;
+}
+
+.image {
+    grid-area: image;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+h1 {
+    grid-area: h1;
+    font-family: 'Outfit', san-serif;
+    font-weight: 600;
+    color: white;
+    font-size: 19px;
+    margin-top: 18px;
+}
+
+h1:hover {
+    color: hsl(178, 100%, 50%)
+}
+
+p {
+    grid-area: text;
+    font-family: 'Outfit', san-serif;
+    font-weight: 300;
+    color: hsl(215, 51%, 70%);
+    font-size: 15px;
+    margin: 10px 0px 15px 0px;
+}
+
+.sims {
+    grid-area: sims;
+    background-image: url("C:\pics-for-code\icon-ethereum.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+    font-family: 'Outfit', san-serif;
+    font-weight: 600;
+    color: hsl(178, 100%, 50%);
+    font-size: 14px;
+}
+
+.time {
+    grid-area: time;
+    background-image: url("C:\pics-for-code\icon-clock.svg") left / no-repeat;
+    font-family: 'Outfit', san-serif;
+    font-weight: 300;
+    color: hsl(215, 51%, 70%);
+    font-size: 15px;
+    text-align: right;
+}
+
+.time,
+.sims {
+    height: 40px;
+}
+
+.figure {
+    width: 8px;
+    height: 13px;
+    margin-right: 3px;
+    position: relative;
+    top: 1px;
+}
+
+.clock {
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: 2px;
+}
+
+footer {
+    grid-area: footer;
+    border-top: 0.4px solid hsl(215, 17%, 44%);
+    padding-top: 15px;
+    font-family: 'Outfit', san-serif;
+    font-weight: 300;
+    color: hsl(215, 51%, 70%);
+    font-size: 15px;
+}
+
+.text {
+    margin: 0px 0px 40px 10px;
+    position: relative;
+    bottom: 10px;
+    font-size: 14px;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    justify-self: center;
+
+}
+
+.hover {
+    color: white;
+}
+
+@media screen and (max-width: 375px) {
+    .main {
+        width: 90%;
+        height: 85%
+    }
+}
